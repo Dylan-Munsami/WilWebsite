@@ -1,0 +1,58 @@
+@{
+    ViewData["Title"] = "Upcoming Events";
+}
+
+<div class="container mt-5">
+    <div class="text-center mb-4">
+        <h1 class="fw-bold text-success">Upcoming Events</h1>
+        <p class="lead text-muted">Join us in making a difference.</p>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card h-100 shadow event-card">
+                <img src="https://images.unsplash.com/photo-1556767576-cfba6a13d45b" class="card-img-top" alt="Cleanup" />
+                <div class="card-body">
+                    <h5 class="card-title text-primary">Community Cleanup Drive</h5>
+                    <p class="card-text">Help us keep our neighborhoods clean and green.</p>
+                    <button class="btn btn-outline-success register-btn">Register</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 shadow event-card">
+                <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d" class="card-img-top" alt="Education" />
+                <div class="card-body">
+                    <h5 class="card-title text-primary">Back-to-School Drive</h5>
+                    <p class="card-text">Donate school supplies to students in need.</p>
+                    <button class="btn btn-outline-success register-btn">Register</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 shadow event-card">
+                <img src="https://images.unsplash.com/photo-1606813909355-3d2a0b3b09a8" class="card-img-top" alt="Health" />
+                <div class="card-body">
+                    <h5 class="card-title text-primary">Health Awareness Fair</h5>
+                    <p class="card-text">Free health screenings and workshops for all ages.</p>
+                    <button class="btn btn-outline-success register-btn">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.querySelectorAll(".register-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                btn.textContent = "Registered ✅";
+                btn.classList.remove("btn-outline-success");
+                btn.classList.add("btn-success");
+                btn.disabled = true;
+            });
+        });
+    </script>
+}

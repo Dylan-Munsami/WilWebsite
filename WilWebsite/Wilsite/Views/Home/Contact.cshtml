@@ -1,0 +1,49 @@
+@{
+    ViewData["Title"] = "Contact Us";
+}
+
+<div class="container mt-5">
+    <div class="text-center mb-4">
+        <h1 class="fw-bold text-primary">Get in Touch</h1>
+        <p class="lead text-muted">We’d love to hear from you.</p>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <form id="contactForm" class="card p-4 shadow">
+                <div class="mb-3">
+                    <label class="form-label">Your Name</label>
+                    <input type="text" class="form-control" required />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" required />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Message</label>
+                    <textarea class="form-control" rows="4" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100 fw-bold">Send Message</button>
+            </form>
+
+            <div id="contactAlert" class="alert alert-info mt-3 d-none">
+                ✅ Message sent! We'll get back to you soon.
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", e => {
+            e.preventDefault();
+            e.target.reset();
+            const alert = document.getElementById("contactAlert");
+            alert.classList.remove("d-none");
+            alert.classList.add("fade", "show");
+        });
+    </script>
+}

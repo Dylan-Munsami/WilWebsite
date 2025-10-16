@@ -1,0 +1,55 @@
+﻿/* Theme colors */
+body {
+  background-color: #f8f9fa;
+  color: #222;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #003366 !important; /* dark blue */
+}
+
+.navbar-brand {
+  color: #ffcc00 !important; /* gold */
+}
+
+.nav-link {
+  color: #ffffff !important;
+}
+
+.nav-link:hover {
+  color: #ffcc00 !important;
+}
+
+/* Hero sections */
+.hero-section {
+  background: linear-gradient(to right, #003366, #004080);
+  color: #fff;
+  padding: 80px 0;
+}
+
+/* Buttons */
+.btn-warning {
+  background-color: #ffcc00;
+  border-color: #e6b800;
+  color: #003366;
+  font-weight: 600;
+}
+
+.btn-warning:hover {
+  background-color: #e6b800;
+  border-color: #cc9900;
+}
+
+/* Footer */
+footer {
+  background-color: #003366;
+  color: #fff;
+}
+
+/* Cards */
+.card-title {
+  color: #003366;
+  font-weight: 600;
+}

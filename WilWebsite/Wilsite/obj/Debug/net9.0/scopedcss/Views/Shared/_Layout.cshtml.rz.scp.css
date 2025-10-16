@@ -1,0 +1,55 @@
+/* Theme colors */
+body[b-qst2cvvuom] {
+  background-color: #f8f9fa;
+  color: #222;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar */
+.navbar[b-qst2cvvuom] {
+  background-color: #003366 !important; /* dark blue */
+}
+
+.navbar-brand[b-qst2cvvuom] {
+  color: #ffcc00 !important; /* gold */
+}
+
+.nav-link[b-qst2cvvuom] {
+  color: #ffffff !important;
+}
+
+.nav-link:hover[b-qst2cvvuom] {
+  color: #ffcc00 !important;
+}
+
+/* Hero sections */
+.hero-section[b-qst2cvvuom] {
+  background: linear-gradient(to right, #003366, #004080);
+  color: #fff;
+  padding: 80px 0;
+}
+
+/* Buttons */
+.btn-warning[b-qst2cvvuom] {
+  background-color: #ffcc00;
+  border-color: #e6b800;
+  color: #003366;
+  font-weight: 600;
+}
+
+.btn-warning:hover[b-qst2cvvuom] {
+  background-color: #e6b800;
+  border-color: #cc9900;
+}
+
+/* Footer */
+footer[b-qst2cvvuom] {
+  background-color: #003366;
+  color: #fff;
+}
+
+/* Cards */
+.card-title[b-qst2cvvuom] {
+  color: #003366;
+  font-weight: 600;
+}
