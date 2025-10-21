@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dylan\\OneDrive\\Desktop\\WilWebsite\\Wilsite\\Wilsite.csproj",
+      "projectUniqueName": "C:\\Users\\dylan\\Downloads\\WilWebsite\\WilWebsite\\Wilsite\\Wilsite.csproj",
       "projectName": "Wilsite",
-      "projectPath": "C:\\Users\\dylan\\OneDrive\\Desktop\\WilWebsite\\Wilsite\\Wilsite.csproj",
+      "projectPath": "C:\\Users\\dylan\\Downloads\\WilWebsite\\WilWebsite\\Wilsite\\Wilsite.csproj",
       "packagesPath": "C:\\Users\\dylan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dylan\\OneDrive\\Desktop\\WilWebsite\\Wilsite\\obj\\",
+      "outputPath": "C:\\Users\\dylan\\Downloads\\WilWebsite\\WilWebsite\\Wilsite\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dylan\\AppData\\Roaming\\NuGet\\NuGet.Config"
