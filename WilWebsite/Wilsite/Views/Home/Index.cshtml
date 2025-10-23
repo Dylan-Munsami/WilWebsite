@@ -2,98 +2,114 @@
     ViewData["Title"] = "Home";
 }
 
-<section class="hero-section position-relative text-white text-center overflow-hidden">
-    <video autoplay muted loop playsinline class="hero-video">
-        <source src="~/videos/video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+<!-- 🔹 Full-Page Background Video -->
+<video autoplay muted loop playsinline id="bg-video">
+    <source src="~/videos/video1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
 
-    <div class="overlay"></div>
+<!-- 🔹 Overlay to improve text contrast -->
+<div class="bg-overlay"></div>
 
-    <div class="container hero-content position-relative d-flex flex-column justify-content-center align-items-center">
-        <h1 class="display-3 fw-bold mb-3 animate__animated animate__fadeInDown">IC Norath Charitable Trust</h1>
-        <p class="lead mb-4 animate__animated animate__fadeInUp">
-            Providing disaster relief and sustainable development for communities in need.
-        </p>
-        <a asp-controller="Home" asp-action="Donate" class="btn btn-warning btn-lg px-5 py-3 shadow-lg">Get Involved</a>
-    </div>
-</section>
+<!-- 🔹 Page Content -->
+<div class="content-wrapper text-white">
+    <section class="text-center py-5 mt-5">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-3 animate__animated animate__fadeInDown">IC Norath Charitable Trust</h1>
+            <p class="lead mb-4 animate__animated animate__fadeInUp">
+                Providing disaster relief and sustainable development for communities in need.
+            </p>
+            <a asp-controller="Home" asp-action="Donate" class="btn btn-warning btn-lg px-5 py-3 shadow-lg">Get Involved</a>
+        </div>
+    </section>
 
-<section class="py-5 text-center">
-    <div class="container">
-        <h2 class="fw-bold mb-4 text-primary">Our Mission</h2>
-        <p class="lead text-muted mx-auto" style="max-width: 800px;">
-            To provide comprehensive disaster relief and implement sustainable poverty reduction initiatives that
-            improve the quality of life for disadvantaged individuals and communities in South Africa.
-        </p>
-    </div>
-</section>
+    <section class="py-5 text-center bg-transparent">
+        <div class="container">
+            <h2 class="fw-bold mb-4 text-warning">Our Mission</h2>
+            <p class="lead text-light mx-auto" style="max-width: 800px;">
+                To provide comprehensive disaster relief and implement sustainable poverty reduction initiatives that
+                improve the quality of life for disadvantaged individuals and communities in South Africa.
+            </p>
+        </div>
+    </section>
 
-<section class="bg-light py-5">
-    <div class="container">
-        <h2 class="text-center fw-bold mb-5 text-success">What We Do</h2>
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="card h-100 shadow border-0">
-                    <img src="~/lib/Images/img4.jpeg" class="card-img-top" alt="Disaster Relief">
-                    <div class="card-body text-center">
-                        <h5 class="fw-semibold text-primary">Disaster Relief</h5>
-                        <p>Immediate response, aid distribution, and community resilience training.</p>
+    <section class="py-5 bg-transparent">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5 text-warning">What We Do</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow border-0 bg-dark bg-opacity-75 text-white">
+                        <img src="~/lib/Images/img4.jpeg" class="card-img-top" alt="Disaster Relief">
+                        <div class="card-body text-center">
+                            <h5 class="fw-semibold text-warning">Disaster Relief</h5>
+                            <p>Immediate response, aid distribution, and community resilience training.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card h-100 shadow border-0">
-                    <img src="~/lib/Images/img2.jpeg" class="card-img-top" alt="Poverty Alleviation">
-                    <div class="card-body text-center">
-                        <h5 class="fw-semibold text-primary">Poverty Alleviation</h5>
-                        <p>Economic empowerment through education, skills training, and nutrition programs.</p>
+
+                <div class="col-md-4">
+                    <div class="card h-100 shadow border-0 bg-dark bg-opacity-75 text-white">
+                        <img src="~/lib/Images/img2.jpeg" class="card-img-top" alt="Poverty Alleviation">
+                        <div class="card-body text-center">
+                            <h5 class="fw-semibold text-warning">Poverty Alleviation</h5>
+                            <p>Economic empowerment through education, skills training, and nutrition programs.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card h-100 shadow border-0">
-                    <img src="~/lib/Images/img3.jpeg" class="card-img-top" alt="Sustainability">
-                    <div class="card-body text-center">
-                        <h5 class="fw-semibold text-primary">Sustainability</h5>
-                        <p>Building strong, self-sufficient communities capable of overcoming adversity.</p>
+
+                <div class="col-md-4">
+                    <div class="card h-100 shadow border-0 bg-dark bg-opacity-75 text-white">
+                        <img src="~/lib/Images/img3.jpeg" class="card-img-top" alt="Sustainability">
+                        <div class="card-body text-center">
+                            <h5 class="fw-semibold text-warning">Sustainability</h5>
+                            <p>Building strong, self-sufficient communities capable of overcoming adversity.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+</div>
 
+<!-- 🔹 Styles -->
 <style>
-    .hero-section {
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .hero-video {
-        position: absolute;
+    /* 🔸 Background video covers entire page */
+    #bg-video {
+        position: fixed;
         top: 0; left: 0;
         width: 100%; height: 100%;
         object-fit: cover;
-        z-index: 1;
+        z-index: -2;
     }
-    .overlay {
-        position: absolute;
+
+    /* 🔸 Dark overlay for readability */
+    .bg-overlay {
+        position: fixed;
+        top: 0; left: 0;
         width: 100%; height: 100%;
         background: rgba(0, 0, 0, 0.6);
+        z-index: -1;
+    }
+
+    /* 🔸 Ensure all content layers above video */
+    .content-wrapper {
+        position: relative;
         z-index: 2;
     }
-    .hero-content {
-        z-index: 3;
-        color: white;
+
+    /* 🔸 Optional: subtle fade-in for content */
+    .animate__fadeInDown, .animate__fadeInUp {
+        animation-duration: 1.5s;
     }
+
+    /* 🔸 Card tweaks for better contrast */
     .card-img-top {
-        height: 250px;
+        height: 220px;
         object-fit: cover;
-        transition: transform 0.3s ease;
     }
-    .card:hover .card-img-top {
-        transform: scale(1.05);
+
+    .card:hover {
+        transform: translateY(-5px);
+        transition: all 0.3s ease;
     }
 </style>
