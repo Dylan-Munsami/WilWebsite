@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Wilsite")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+91e4b52f0f4ad431db8323f8a3be41d826969cd0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7c63d48627bb6ccd0d61961d901b07c42a28f9b6")]
 [assembly: System.Reflection.AssemblyProductAttribute("Wilsite")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Wilsite")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,102 +1,210 @@
 @{
-    ViewData["Title"] = "Donate";
+    ViewData["Title"] = "Make a Donation";
 }
 
-<div class="container my-5 text-center">
-
-
-
-    <h2 class="fw-bold">Donate</h2>
-    <p class="text-muted mb-4">
-        Every rand you give helps provide food, water, shelter and hope to families in need.
-    </p>
-
-    <div class="d-flex justify-content-center mb-4">
-        <img src="/lib/Images/img4.jpeg"
-             alt="Donation"
-             class="rounded shadow"
-             style="width:300px; height:auto;" />
-    </div>
-
-    <h5 class="mt-4 mb-3">How much would you like to donate?</h5>
-    <div class="d-flex justify-content-center gap-3 mb-3">
-        <button class="btn btn-amount">R10</button>
-        <button class="btn btn-amount">R20</button>
-        <button class="btn btn-amount">R50</button>
-        <button class="btn btn-amount">R100</button>
-    </div>
-
-    <div class="mb-4">
-        <label class="form-label d-block fw-semibold">Custom Amount:</label>
-        <input type="number" id="customAmount" class="form-control w-25 mx-auto text-center"
-               placeholder="Enter amount here" />
-    </div>
-
-    <div class="d-grid gap-3 col-md-4 mx-auto mb-3">
-        <button class="btn btn-warning fw-bold pay-btn">Pay using Zapper</button>
-        <button class="btn btn-warning fw-bold pay-btn">Pay using Payfast</button>
-    </div>
-
-    <div class="small text-start text-muted mt-2 mx-auto" style="max-width: 500px;">
-        <p class="mb-0">
-            <span class="text-success"> Secure Payment</span><br />
-            <span class="text-success"> 100% of funds go to community aid</span>
+<div class="container my-5">
+    <!-- Header Section -->
+    <div class="text-center mb-5">
+        <h1 class="fw-bold text-primary mb-3">Support Our Cause</h1>
+        <p class="lead text-muted mb-4">
+            Every contribution helps provide essential resources to families in need. Together, we can make a difference.
         </p>
+        
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <img src="/lib/Images/img4.jpeg"
+                     alt="Community support through donations"
+                     class="rounded-3 shadow-lg img-fluid"
+                     style="max-height: 400px; object-fit: cover;" />
+            </div>
+        </div>
     </div>
 
-    <div class="mt-4 text-start mx-auto" style="max-width: 500px;">
-        <h6 class="fw-bold">EFT details:</h6>
-        <div class="border rounded bg-light p-3 text-start">
-            <p class="mb-0">
-                <strong>Bank:</strong> Albaraka Bank<br />
-                <strong>Account Name:</strong> I.C. Norath Charitable Foundation<br />
-                <strong>Account Number:</strong> 78600246920<br />
-                 <strong>Profile ID:</strong> C0201901160001<br />
-                <strong>Reference:</strong> Name od donor/Anonymous
-            </p>
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <!-- Amount Selection -->
+            <div class="card shadow-sm border-0 mb-4">
+                <div class="card-body p-4">
+                    <h4 class="card-title fw-bold mb-3">Select Donation Amount</h4>
+                    
+                    <div class="row g-3 mb-4">
+                        <div class="col-6 col-sm-3">
+                            <button class="btn btn-amount w-100 py-3">R10</button>
+                        </div>
+                        <div class="col-6 col-sm-3">
+                            <button class="btn btn-amount w-100 py-3">R20</button>
+                        </div>
+                        <div class="col-6 col-sm-3">
+                            <button class="btn btn-amount w-100 py-3">R50</button>
+                        </div>
+                        <div class="col-6 col-sm-3">
+                            <button class="btn btn-amount w-100 py-3">R100</button>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold">Or enter custom amount:</label>
+                        <div class="input-group input-group-lg">
+                            <span class="input-group-text bg-light">R</span>
+                            <input type="number" id="customAmount" class="form-control text-center"
+                                   placeholder="Enter amount" min="1" step="1" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payment Methods -->
+            <div class="card shadow-sm border-0 mb-4">
+                <div class="card-body p-4">
+                    <h4 class="card-title fw-bold mb-3">Choose Payment Method</h4>
+                    
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <button class="btn btn-primary btn-payment w-100 py-3 d-flex align-items-center justify-content-center gap-2">
+                                <i class="bi bi-phone"></i>
+                                Pay using Zapper
+                            </button>
+                        </div>
+                        <div class="col-md-6">
+                            <button class="btn btn-success btn-payment w-100 py-3 d-flex align-items-center justify-content-center gap-2">
+                                <i class="bi bi-credit-card"></i>
+                                Pay using Payfast
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="mt-3 text-center">
+                        <small class="text-muted">
+                            <i class="bi bi-shield-check text-success"></i>
+                            Secure payment · 100% goes to community aid
+                        </small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bank Transfer Option -->
+            <div class="card shadow-sm border-0">
+                <div class="card-body p-4">
+                    <h4 class="card-title fw-bold mb-3">Bank Transfer Details</h4>
+                    <p class="text-muted mb-3">Prefer to transfer directly? Use these details:</p>
+                    
+                    <div class="bg-light rounded-3 p-4">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p class="mb-2"><strong>Bank:</strong> Albaraka Bank</p>
+                                <p class="mb-2"><strong>Account Name:</strong> I.C. Norath Charitable Foundation</p>
+                                <p class="mb-2"><strong>Account Number:</strong> 78600246920</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="mb-2"><strong>Profile ID:</strong> C0201901160001</p>
+                                <p class="mb-0"><strong>Reference:</strong> Your name or "Anonymous"</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="alert alert-info mt-3 mb-0">
+                        <small>
+                            <i class="bi bi-info-circle"></i>
+                            Please include your name in the reference if you'd like us to acknowledge your donation.
+                        </small>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
 @section Scripts {
     <script>
-        // Highlight selected amount button
+        // Amount selection functionality
         const amountButtons = document.querySelectorAll('.btn-amount');
         const customAmount = document.getElementById('customAmount');
+        const paymentButtons = document.querySelectorAll('.btn-payment');
 
         amountButtons.forEach(btn => {
             btn.addEventListener('click', () => {
-                amountButtons.forEach(b => b.classList.remove('selected'));
-                btn.classList.add('selected');
+                // Remove selected class from all buttons
+                amountButtons.forEach(b => b.classList.remove('btn-primary', 'selected'));
+                // Add selected class to clicked button
+                btn.classList.add('btn-primary', 'selected');
+                // Update custom amount input
                 customAmount.value = btn.innerText.replace('R', '');
             });
         });
 
-        // Add hover effect on payment buttons
-        document.querySelectorAll('.pay-btn').forEach(btn => {
-            btn.addEventListener('mouseenter', () => btn.style.opacity = "0.85");
-            btn.addEventListener('mouseleave', () => btn.style.opacity = "1");
+        // Clear selection when custom amount is focused
+        customAmount.addEventListener('focus', () => {
+            amountButtons.forEach(b => b.classList.remove('btn-primary', 'selected'));
+        });
+
+        // Payment button interactions
+        paymentButtons.forEach(btn => {
+            btn.addEventListener('mouseenter', () => {
+                btn.style.transform = 'translateY(-2px)';
+                btn.style.transition = 'all 0.2s ease';
+            });
+            
+            btn.addEventListener('mouseleave', () => {
+                btn.style.transform = 'translateY(0)';
+            });
+
+            btn.addEventListener('click', () => {
+                const amount = customAmount.value || document.querySelector('.btn-amount.selected')?.innerText.replace('R', '');
+                if (!amount || amount <= 0) {
+                    alert('Please select or enter a donation amount first.');
+                    return;
+                }
+                
+                // Here you would typically redirect to payment gateway
+                alert(`Redirecting to payment gateway with amount: R${amount}`);
+            });
         });
     </script>
 }
 
 <style>
     .btn-amount {
-        background-color: #f4f6e6;
-        border: 1px solid #ddd;
-        padding: 10px 25px;
-        border-radius: 10px;
+        background-color: #f8f9fa;
+        border: 2px solid #dee2e6;
+        border-radius: 12px;
         font-weight: 600;
-        transition: 0.2s;
+        color: #495057;
+        transition: all 0.3s ease;
     }
+
     .btn-amount:hover {
-        background-color: #e8e8d8;
+        background-color: #e9ecef;
+        border-color: #6c757d;
+        transform: translateY(-2px);
     }
+
     .btn-amount.selected {
-        background-color: #ffd54f;
-        border-color: #ffca28;
+        background-color: #0d6efd;
+        border-color: #0d6efd;
+        color: white;
     }
-    .pay-btn {
-        border-radius: 10px;
+
+    .btn-payment {
+        border-radius: 12px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        border: none;
+    }
+
+    .btn-payment:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .card {
+        border-radius: 16px;
+    }
+
+    .input-group-text {
+        border-radius: 12px 0 0 12px;
+    }
+
+    .form-control {
+        border-radius: 0 12px 12px 0;
     }
 </style>
